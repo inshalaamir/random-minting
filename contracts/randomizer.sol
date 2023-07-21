@@ -28,10 +28,10 @@ contract randomizer{
     function setPlayers (uint256 start, uint256 end) public {
         for(uint i=start; i<end; i++){
             players.push(i);
-            last[i][current_season][0] = 399;
-            last[i][current_season][1] = 99;
-            last[i][current_season][2] = 19;
-            last[i][current_season][3] = 1;
+            last[i][current_season][0] = 39999;
+            last[i][current_season][1] = 9999;
+            last[i][current_season][2] = 1999;
+            last[i][current_season][3] = 199;
         }
     }
  

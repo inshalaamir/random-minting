@@ -8,11 +8,16 @@ async function main () {
     const tx1 = await randomizer.setPlayers(0,200);
     const rcpt1 = tx1.wait()
     console.log("Set players from 0 to 199");
+
     const tx2 = await randomizer.setPlayers(200,400);
     const rcpt2 = tx2.wait()
-    console.log("Set players from 200 to 400");
+    console.log("Set players from 200 to 399");
 
-    for (let i=0; i<4176000; i++){
+    const tx3 = await randomizer.setPlayers(400,450);
+    const rcpt3 = tx3.wait()
+    console.log("Set players from 400 to 449")
+
+    for (let i=0; i<4699000; i++){
     const tx = await randomizer.buy(i)
     const rcpt = await tx.wait()
     
