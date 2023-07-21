@@ -34,6 +34,11 @@ contract randomizer{
             last[i][current_season][3] = 199;
         }
     }
+
+    function updateSeason(uint[] memory _players, uint _season) public {
+        players = _players;
+        current_season = _season;
+    }
  
     function randomMint(uint randomIndex) public returns (uint, uint, uint) {
 
