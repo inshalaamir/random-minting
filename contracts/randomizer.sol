@@ -22,15 +22,19 @@ contract randomizer{
     constructor(uint _current_season){
 
         current_season = _current_season;
-        for(uint i=0; i<400; i++){
-            players.push(i);
-            last[i][_current_season][0] = 39999;
-            last[i][_current_season][1] = 9999;
-            last[i][_current_season][2] = 1999;
-            last[i][_current_season][3] = 199;
-        }
+        
     }
 
+    function setPlayers (uint256 start, uint256 end) public {
+        for(uint i=start; i<end; i++){
+            players.push(i);
+            last[i][current_season][0] = 399;
+            last[i][current_season][1] = 99;
+            last[i][current_season][2] = 19;
+            last[i][current_season][3] = 1;
+        }
+    }
+ 
     function randomMint(uint randomIndex) public returns (uint, uint, uint) {
 
         require(players.length>0, "No more cards left for minting");

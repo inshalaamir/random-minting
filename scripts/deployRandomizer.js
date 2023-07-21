@@ -9,6 +9,7 @@ async function main() {
     await randomizerDeployed.deployed();
 
     console.log("contract was deployed at ", randomizerDeployed.address);
+
 }
 
 main().catch((error) => {
